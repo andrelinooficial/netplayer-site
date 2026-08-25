@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetPlayer - IPTV</title>
+  <meta name="description" content="NET Player: assista filmes, séries e TV ao vivo com qualidade 4K. Suporte 24/7, preço acessível e catálogo completo em todos os dispositivos." />
+  <meta property="og:title" content="NET Player — Filmes, Séries e TV ao Vivo" />
+  <meta property="og:description" content="O melhor streaming de filmes, séries e TV ao vivo. Assine agora com preço acessível." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23F2385A'/><text x='16' y='22' font-size='18' font-weight='bold' text-anchor='middle' fill='white'>N</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       1. HEADER
+       ============================================ -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="NET Player — Página inicial">
+        <img src="assets/img/logo.svg" alt="NET logo" style="height: 28px; width: auto; display: block;" />
+      </a>
+      <div class="header-right">
+        <div class="lang-switch" role="group" aria-label="Selecionar idioma">
+          <button class="active" aria-label="Português">PT</button>
+          <span>|</span>
+          <button aria-label="English">EN</button>
+        </div>
+        <div class="header-separator"></div>
+        <a href="#" class="btn-login">Entrar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================
+         2. HERO
+         ============================================ -->
+    <section class="hero section" id="hero">
+
+      <!-- Decorative: Fita de cinema (esquerda) -->
+      <div class="hero-illust hero-illust--left" aria-hidden="true">
+        <img src="assets/img/fita.png" alt="" />
+      </div>
+
+      <!-- Decorative: Câmera de cinema (direita) -->
+      <div class="hero-illust hero-illust--right" aria-hidden="true">
+        <img src="assets/img/cam.png" alt="" />
+      </div>
+
+      <div class="container">
+        <span class="hero-label reveal">APROVEITE</span>
+        <h1 class="hero-title reveal">
+          Os Melhores Filmes,
+          <span class="highlight">Séries</span>
+          E TV Ao Vivo
+        </h1>
+        <p class="hero-subtitle reveal">
+          Satisfação garantida com o melhor catálogo de conteúdo. Assista a tudo que ama por um preço acessível por mês.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#pricing" class="btn-primary">TESTE GRÁTIS</a>
+          <a href="#benefits" class="btn-outline">INDIQUE UM AMIGO</a>
+        </div>
+
+        <!-- Floating feature cards -->
+        <div class="hero-cards">
+          <!-- Card 1 (Trusted Company) -->
+          <div class="hero-card ticket-card reveal">
+            <div class="ticket-card-icon">
+              <!-- Umbrella icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4FD8E8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12a10 10 0 0 1 20 0Z"/>
+                <path d="M12 18a2 2 0 1 0 4 0"/>
+              </svg>
+            </div>
+            <div class="ticket-card-content">
+              <h3>Confiável</h3>
+              <p>A satisfação e confiança dos nossos assinantes vem em primeiro lugar.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 (24/7 Support) - Highlighted -->
+          <div class="hero-card ticket-card reveal">
+            <div class="ticket-card-icon">
+              <!-- Headset icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4FD8E8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+              </svg>
+            </div>
+            <div class="ticket-card-content">
+              <h3>Suporte +</h3>
+              <p>Você sempre pode entrar em contato conosco pelo meio mais conveniente.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 (Archive) -->
+          <div class="hero-card ticket-card reveal">
+            <div class="ticket-card-icon">
+              <!-- Archive / tray icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4FD8E8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 8v13H3V8M1 3h22v5H1Z"/>
+                <path d="M10 12h4"/>
+              </svg>
+            </div>
+            <div class="ticket-card-content">
+              <h3>Fidelização</h3>
+              <p>Indique e ganhe um mês de acesso gratuito ao nosso catálogo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         3. SMARTER — "Mais Inteligente Que Nunca"
+         ============================================ -->
+    <section class="smarter section" id="smarter">
+      <div class="container">
+        
+        <!-- Top row: Title, Glasses, Paragraph description -->
+        <div class="smarter-top reveal">
+          
+          <div class="smarter-title-col">
+            <h2 class="smarter-title">
+              Mais <span class="highlight">Inteligente</span><br/>Que Nunca
+            </h2>
+          </div>
+          
+          <div class="smarter-glasses-col">
+            <div class="smarter-glasses-wrap">
+              <img src="assets/img/oculos.png" alt="Óculos 3D" class="smarter-glasses-img" />
+            </div>
+          </div>
+          
+          <div class="smarter-desc-col">
+            <p class="smarter-desc-text">
+              Instale um dos nossos <span class="highlight-underline">aplicativos</span> parceiros no seu dispositivo e tenha acesso ao nosso catálogo.
+            </p>
+          </div>
+          
+        </div>
+
+        <!-- Carousel container -->
+        <div class="smarter-carousel-container reveal">
+          <div class="smarter-carousel-viewport">
+            <div class="smarter-devices-grid">
+              
+              <!-- Card 1: Android (active) -->
+              <div class="device-card active">
+                <div class="device-card-inner">
+                  <span class="device-name">android</span>
+                  <svg class="device-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.27-.85-.31-.16-.69-.04-.85.27l-1.86 3.22c-1.44-.65-3.04-1.02-4.72-1.02s-3.28.37-4.72 1.02L5.17 5.72c-.16-.31-.54-.43-.85-.27-.31.16-.43.54-.27.85L5.89 9.48C2.93 11.17 1.05 14.11 1 17.5h21.5c-.05-3.39-1.93-6.33-4.9-8.02zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm9.5 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/></svg>
+                </div>
+              </div>
+
+              <!-- Card 2: Android TV -->
+              <div class="device-card">
+                <div class="device-card-inner">
+                  <span class="device-name">androidtv</span>
+                </div>
+              </div>
+
+              <!-- Card 3: LG (Soon) -->
+              <div class="device-card disabled">
+                <span class="soon-badge">SOON</span>
+                <div class="device-card-inner">
+                  <span class="device-name">LG Smart TV</span>
+                </div>
+              </div>
+
+              <!-- Card 4: Samsung (Soon) -->
+              <div class="device-card disabled">
+                <span class="soon-badge">SOON</span>
+                <div class="device-card-inner">
+                  <span class="device-name">Samsung TV</span>
+                </div>
+              </div>
+
+              <!-- Card 5: TV Box (Soon) -->
+              <div class="device-card disabled">
+                <span class="soon-badge">SOON</span>
+                <div class="device-card-inner">
+                  <span class="device-name">TV Box</span>
+                </div>
+              </div>
+
+              <!-- Card 6: Fire TV (Soon) -->
+              <div class="device-card disabled">
+                <span class="soon-badge">SOON</span>
+                <div class="device-card-inner">
+                  <span class="device-name">amazon firetv</span>
+                </div>
+              </div>
+
+              <!-- Card 7: Chromecast (Soon) -->
+              <div class="device-card disabled">
+                <span class="soon-badge">SOON</span>
+                <div class="device-card-inner">
+                  <span class="device-name">Chromecast</span>
+                </div>
+              </div>
+
+              <!-- Card 8: Roku (Soon) -->
+              <div class="device-card disabled">
+                <span class="soon-badge">SOON</span>
+                <div class="device-card-inner">
+                  <span class="device-name">Roku TV</span>
+                </div>
+              </div>
+
+              <!-- Card 9: PC Browser (Soon) -->
+              <div class="device-card disabled">
+                <span class="soon-badge">SOON</span>
+                <div class="device-card-inner">
+                  <span class="device-name">Navegador PC</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <!-- Dots indicators -->
+          <div class="smarter-carousel-dots">
+            <!-- Will be generated dynamically in JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         4. APP ANDROID
+         ============================================ -->
+    <section class="app-section section" id="app-download">
+      <div class="container">
+        <div class="app-inner">
+
+          <!-- Phone mockup -->
+          <div class="app-mockup reveal">
+            <div class="app-mockup-phone">
+              <div class="phone-content">
+                <div class="phone-logo">NET Player</div>
+                <p>Filmes, Séries &amp; TV ao Vivo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Info -->
+          <div class="app-info reveal">
+            <div class="app-watermark" aria-hidden="true">NET PLAYER</div>
+            <div class="android-label">
+              <svg viewBox="0 0 24 24" fill="#3DDC84"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.27-.85-.31-.16-.69-.04-.85.27l-1.86 3.22c-1.44-.65-3.04-1.02-4.72-1.02s-3.28.37-4.72 1.02L5.17 5.72c-.16-.31-.54-.43-.85-.27-.31.16-.43.54-.27.85L5.89 9.48C2.93 11.17 1.05 14.11 1 17.5h21.5c-.05-3.39-1.93-6.33-4.9-8.02zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm9.5 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/></svg>
+              <span>android</span>
+            </div>
+            <p class="section-text">
+              Estamos desenvolvendo nosso aplicativo próprio para que os nossos clientes tenham uma melhor experiência de entretenimento, trazendo mais velocidade e qualidade na transmissão de conteúdos.
+            </p>
+            <div class="app-buttons">
+              <a href="#" class="app-btn" aria-label="Baixar na Google Play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.09 12l2.608-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302L5.864 2.658z"/></svg>
+                Google Play
+              </a>
+              <a href="#" class="app-btn" aria-label="Download direto do APK">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         5. ABOUT / CONVENIENT
+         ============================================ -->
+    <section class="about section" id="about">
+      <div class="container">
+        
+        <!-- Top area: Content and Clapperboard -->
+        <div class="about-top">
+          
+          <div class="about-text-col">
+            <h2 class="about-title reveal">
+              NET Player É <span class="highlight-title">Fácil De Acessar</span> <span class="gray-title">E</span> Muito Conveniente Para Você
+            </h2>
+            <div class="about-desc-wrap reveal">
+              <p class="about-desc-text">
+                Conecte-se ao maior catálogo de entretenimento. Com filmes, séries e canais ao vivo, tudo em um só <span class="highlight-underline">lugar</span> — em qualquer dispositivo, a qualquer hora.
+              </p>
+              
+              <!-- Cursive arrow pointing to the clapperboard -->
+              <div class="arrow-wrap" aria-hidden="true">
+                <svg class="cursive-arrow" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Curve -->
+                  <path d="M10,10 C40,5 70,55 95,45" stroke="#9DA4A6" stroke-width="2" stroke-linecap="round" fill="none"/>
+                  <!-- Arrowhead -->
+                  <path d="M82,46 L95,45 L92,32" stroke="#9DA4A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-illust-col reveal">
+            <div class="clapperboard-wrap">
+              <img src="assets/img/claquete.png" alt="Claquete de Cinema" class="clapperboard-img" />
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- Close main container early -->
+
+      <!-- Bottom area: Film Strip containing features (outside container for full screen width) -->
+      <div class="film-strip reveal">
+        <div class="container">
+          <div class="film-strip-inner">
+            
+            <!-- Feature 1 -->
+            <div class="film-feature">
+              <div class="film-feature-logo">
+                <span class="logo-4k">4K</span>
+                <span class="logo-hd">FULLHD</span>
+              </div>
+              <div class="film-feature-text">
+                <h3>FHD &amp; 4K UHD</h3>
+                <p>Qualidade de imagem cristalina para a melhor experiência de streaming em todos os dispositivos.</p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         6. PRICING / TV PACKAGES
+         ============================================ -->
+    <section class="pricing section" id="pricing">
+      <!-- Giant background text -->
+      <div class="pricing-bg-text" aria-hidden="true">PACOTES DE TV</div>
+
+      <!-- Megaphone illustration -->
+      <div class="pricing-illust" aria-hidden="true">
+        <svg viewBox="0 0 240 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Megaphone body -->
+          <path d="M60 80 L180 30 L180 210 L60 160 Z" stroke="#9AA1B0" stroke-width="2" fill="none"/>
+          <!-- Megaphone bell -->
+          <path d="M180 30 Q220 15 230 120 Q220 225 180 210" stroke="#9AA1B0" stroke-width="2" fill="none"/>
+          <!-- Handle -->
+          <rect x="30" y="80" width="30" height="80" rx="8" stroke="#9AA1B0" stroke-width="2" fill="none"/>
+          <!-- Sound waves -->
+          <path d="M200 80 Q220 120 200 160" stroke="#F2385A" stroke-width="1.5" fill="none" opacity=".5"/>
+          <path d="M210 60 Q240 120 210 180" stroke="#4FD8E8" stroke-width="1.5" fill="none" opacity=".4"/>
+          <!-- Support bar -->
+          <line x1="45" y1="160" x2="45" y2="220" stroke="#9AA1B0" stroke-width="2"/>
+          <line x1="30" y1="220" x2="60" y2="220" stroke="#9AA1B0" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="pricing-header">
+          <h2 class="section-title reveal">PACOTES DE <span class="highlight">TV</span></h2>
+          <p class="section-text reveal">Escolha o plano ideal para você e comece a assistir agora mesmo.</p>
+        </div>
+
+        <div class="pricing-cards">
+
+          <!-- Featured: Annual Plan -->
+          <div class="price-card featured reveal">
+            <div class="best-price-tag">MELHOR PREÇO</div>
+            <div class="price-card-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="20" stroke="#F2385A" stroke-width="2" fill="none"/>
+                <circle cx="24" cy="24" r="12" stroke="#F2385A" stroke-width="1.5" fill="none"/>
+                <circle cx="24" cy="24" r="4" fill="#F2385A"/>
+                <circle cx="24" cy="8" r="3" stroke="#F2385A" stroke-width="1" fill="none"/>
+                <circle cx="24" cy="40" r="3" stroke="#F2385A" stroke-width="1" fill="none"/>
+                <circle cx="8" cy="24" r="3" stroke="#F2385A" stroke-width="1" fill="none"/>
+                <circle cx="40" cy="24" r="3" stroke="#F2385A" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+            <div class="price-card-plan">1 DISPOSITIVO</div>
+            <div class="price-card-price">
+              <span class="currency">R$</span>
+              <span class="amount">30</span>
+              <span class="period">Renovação mensal</span>
+            </div>
+            <hr class="price-card-divider"/>
+            <ul class="price-card-features">
+              <li>
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+                Filmes &amp; Séries ilimitados
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+                +400 Canais de TV ao Vivo
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+                Qualidade até 4K UHD
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+                Suporte personalizado
+              </li>
+            </ul>
+            <a href="#" class="btn-primary">COMPRAR</a>
+          </div>
+
+          <!-- Monthly Plan -->
+          <div class="price-card reveal">
+            <div class="price-card-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="20" stroke="#9AA1B0" stroke-width="2" fill="none"/>
+                <circle cx="24" cy="24" r="12" stroke="#9AA1B0" stroke-width="1.5" fill="none"/>
+                <circle cx="24" cy="24" r="4" fill="#9AA1B0"/>
+                <circle cx="24" cy="8" r="3" stroke="#9AA1B0" stroke-width="1" fill="none"/>
+                <circle cx="24" cy="40" r="3" stroke="#9AA1B0" stroke-width="1" fill="none"/>
+                <circle cx="8" cy="24" r="3" stroke="#9AA1B0" stroke-width="1" fill="none"/>
+                <circle cx="40" cy="24" r="3" stroke="#9AA1B0" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+            <div class="price-card-plan">2 DISPOSITIVOS</div>
+            <div class="price-card-price">
+              <span class="currency">R$</span>
+              <span class="amount">50</span>
+              <span class="period">Renovação mensal</span>
+            </div>
+            <hr class="price-card-divider"/>
+            <ul class="price-card-features">
+              <li>
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+                Filmes &amp; Séries ilimitados
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+                +400 Canais de TV ao Vivo
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+                Qualidade até 4K UHD
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+                Suporte personalizado
+              </li>
+            </ul>
+            <a href="#" class="btn-outline">COMPRAR</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         7. BENEFITS DOUBLE BLOCK
+         ============================================ -->
+    <section class="benefits section" id="benefits">
+      <div class="container">
+        <div class="benefits-grid">
+
+          <div class="benefit-block reveal">
+            <h3>Acesso Por <span style="color:var(--color-accent)">7 Dias</span></h3>
+            <p>Experimente o NET Player gratuitamente por 7 dias. Sem compromisso, sem cartão de crédito — apenas entretenimento ilimitado.</p>
+            <a href="#" class="btn-primary btn-accent">TESTE GRÁTIS</a>
+          </div>
+
+          <div class="benefit-block reveal">
+            <h3>Indique Seus <span style="color:var(--color-primary)">Amigos</span></h3>
+            <p>Compartilhe o NET Player com amigos e ganhe benefícios exclusivos. Quanto mais amigos, mais você ganha!</p>
+            <a href="#" class="btn-outline">INDICAR AMIGOS</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         8. FAQ
+         ============================================ -->
+    <section class="faq section" id="faq">
+      <!-- Giant background text -->
+      <div class="faq-bg-text" aria-hidden="true">FAQ</div>
+
+      <div class="container">
+        <div class="faq-content">
+
+          <div class="faq-header">
+            <h2 class="section-title reveal">Perguntas E <span class="highlight">Respostas</span></h2>
+            <p class="section-text reveal">Tire suas dúvidas sobre o NET Player. Se não encontrar o que procura, nosso suporte está disponível 24 horas.</p>
+
+            <!-- Cinema chair illustration -->
+            <div class="faq-illust reveal" aria-hidden="true">
+              <svg viewBox="0 0 180 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Chair back -->
+                <path d="M30 50 Q30 20 60 20 L120 20 Q150 20 150 50 L150 110 L30 110 Z" stroke="#9AA1B0" stroke-width="2" fill="none"/>
+                <!-- Chair cushion (red) -->
+                <rect x="25" y="110" width="130" height="40" rx="10" stroke="#F2385A" stroke-width="2" fill="none"/>
+                <rect x="30" y="115" width="120" height="30" rx="8" fill="#F2385A" opacity=".15"/>
+                <!-- Chair back fill -->
+                <rect x="35" y="28" width="110" height="75" rx="8" fill="#F2385A" opacity=".1"/>
+                <!-- Armrests -->
+                <path d="M25 100 L15 100 L15 155 L25 155" stroke="#9AA1B0" stroke-width="2" fill="none"/>
+                <path d="M155 100 L165 100 L165 155 L155 155" stroke="#9AA1B0" stroke-width="2" fill="none"/>
+                <!-- Legs -->
+                <line x1="40" y1="150" x2="35" y2="190" stroke="#9AA1B0" stroke-width="2"/>
+                <line x1="140" y1="150" x2="145" y2="190" stroke="#9AA1B0" stroke-width="2"/>
+                <!-- Base -->
+                <line x1="25" y1="190" x2="155" y2="190" stroke="#9AA1B0" stroke-width="2" stroke-linecap="round"/>
+                <!-- Popcorn bucket -->
+                <path d="M100 70 L85 105 L115 105 Z" stroke="#FFC857" stroke-width="1.5" fill="none"/>
+                <circle cx="95" cy="62" r="4" fill="#FFC857" opacity=".6"/>
+                <circle cx="105" cy="60" r="3" fill="#FFC857" opacity=".5"/>
+                <circle cx="100" cy="55" r="3.5" fill="#FFC857" opacity=".55"/>
+                <circle cx="92" cy="56" r="2.5" fill="#FFC857" opacity=".45"/>
+                <circle cx="108" cy="56" r="2.5" fill="#FFC857" opacity=".45"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="faq-list">
+            <div class="faq-item open">
+              <button class="faq-question" aria-expanded="true">
+                <span class="faq-number">01</span>
+                <span class="faq-question-text">O que é o NET Player e como funciona?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  O NET Player é um serviço de streaming que oferece filmes, séries e TV ao vivo. Basta instalar nosso aplicativo no seu dispositivo Android, Smart TV ou acessar pelo navegador. Após a assinatura, você tem acesso completo a todo o catálogo de conteúdo, incluindo mais de 400 canais ao vivo e um vasto acervo de filmes e séries sob demanda.
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-number">02</span>
+                <span class="faq-question-text">Em quais dispositivos posso usar o NET Player?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Atualmente o NET Player está disponível para dispositivos Android (smartphones e tablets) e Android TV. Em breve teremos suporte para LG, Samsung Smart TV e Amazon Fire TV. Você também pode acessar pelo navegador web em qualquer computador.
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-number">03</span>
+                <span class="faq-question-text">Posso testar o serviço antes de assinar?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Sim! Oferecemos 7 dias de acesso gratuito para que você experimente todo o catálogo sem compromisso. Não é necessário cartão de crédito para iniciar o teste. Se gostar, basta escolher um dos nossos planos para continuar assistindo.
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-number">04</span>
+                <span class="faq-question-text">Qual é a qualidade do streaming?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  O NET Player oferece streaming em qualidade até 4K Ultra HD, dependendo do conteúdo e da velocidade da sua conexão. A maioria dos canais ao vivo está disponível em Full HD (1080p), e nosso sistema ajusta automaticamente a qualidade para garantir a melhor experiência sem travamentos.
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span class="faq-number">05</span>
+                <span class="faq-question-text">Como funciona o programa de indicação?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Nosso programa de indicação é simples: compartilhe seu link exclusivo com amigos. Quando eles assinarem o NET Player através do seu link, você ganha créditos que podem ser usados para estender sua assinatura. Quanto mais amigos você indicar, mais meses gratuitos você acumula!
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       9. FOOTER
+       ============================================ -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+
+      <!-- Logo with stacked shadow effect -->
+      <div class="footer-logo-wrap reveal">
+        <span class="footer-logo-shadow" aria-hidden="true">NET Player</span>
+        <span class="footer-logo-shadow" aria-hidden="true">NET Player</span>
+        <span class="footer-logo-shadow" aria-hidden="true">NET Player</span>
+        <span class="footer-logo">NET Player</span>
+      </div>
+
+      <!-- Grid -->
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#pricing">Cadastrar</a></li>
+            <li><a href="#">Revendedor</a></li>
+            <li><a href="#">Termos e Condições</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Acesso</h4>
+          <ul>
+            <li><a href="#">Entrar</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#">Privacidade</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Suporte</h4>
+          <ul>
+            <li><a href="#">Reembolso</a></li>
+            <li><a href="#">Central de Ajuda</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Fale Conosco</h4>
+          <div class="footer-contact">
+            <p>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              +55 (11) 9999-0000
+            </p>
+            <p>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              contato@netplayer.com.br
+            </p>
+          </div>
+
+          <!-- Social icons -->
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+            <a href="#" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056zm4.962 7.224l-1.785 8.41c-.131.612-.478.764-.97.476l-2.67-1.97-1.29 1.24c-.142.142-.262.262-.537.262l.19-2.72 4.97-4.49c.216-.19-.047-.297-.334-.108L8.39 13.29l-2.62-.82c-.57-.178-.58-.57.12-.843l10.24-3.95c.474-.178.89.108.735.843l.04-.296z"/></svg>
+            </a>
+          </div>
+
+          <!-- App download badges -->
+          <div class="footer-badges">
+            <a href="#" class="footer-badge" aria-label="Baixar na Google Play">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.09 12l2.608-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302L5.864 2.658z"/></svg>
+              Google Play
+            </a>
+            <a href="#" class="footer-badge" aria-label="Download APK">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download APK
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 NET PLAYER. Todos os direitos reservados.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
