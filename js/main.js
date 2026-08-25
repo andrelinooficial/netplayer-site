@@ -4,12 +4,29 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initStickyHeader();
   initScrollReveal();
   initFaqAccordion();
   initSmarterCarousel();
   initLangSwitch();
   initSmoothScroll();
 });
+
+/* ---------- 0. Sticky Header on Scroll ---------- */
+function initStickyHeader() {
+  const header = document.getElementById('header');
+  if (!header) return;
+
+  const scrollThreshold = 50;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > scrollThreshold) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+}
 
 /* ---------- 1. Scroll Reveal (IntersectionObserver) ---------- */
 function initScrollReveal() {
