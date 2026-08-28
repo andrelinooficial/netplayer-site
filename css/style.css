@@ -2148,11 +2148,11 @@ body.modal-open {
   font-weight: var(--fw-semibold);
   letter-spacing: 0.5px;
   color: #FFFFFF;
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
   border: none;
   border-radius: var(--radius-md);
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
+  box-shadow: 0 4px 20px var(--color-primary-glow);
   transition: all var(--transition);
   position: relative;
   overflow: hidden;
@@ -2175,7 +2175,7 @@ body.modal-open {
 
 .modal-submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 6px 28px rgba(242, 56, 90, 0.45);
 }
 
 .modal-submit-btn:disabled {
@@ -2244,6 +2244,12 @@ body.modal-open {
 .success-wa-btn {
   text-decoration: none;
   margin-top: 0;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
+}
+
+.success-wa-btn:hover {
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.4);
 }
 
 /* ---- Responsive ---- */

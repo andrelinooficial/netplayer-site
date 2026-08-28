@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLangSwitch();
   initSmoothScroll();
   initTrialModal();
+  initSupportModal();
 });
 
 /* ---------- 0. Sticky Header on Scroll ---------- */
@@ -352,4 +353,48 @@ function initTrialModal() {
       }, 600);
     });
   }
+}
+
+/* ---------- 7. Custom Support Modal ---------- */
+function initSupportModal() {
+  const modal = document.getElementById('support-modal');
+  if (!modal) return;
+
+  const triggers = document.querySelectorAll('.btn-trigger-support');
+  const closeBtn = modal.querySelector('.modal-close');
+
+  function openModal() {
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
 }
