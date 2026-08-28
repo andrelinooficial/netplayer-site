@@ -172,6 +172,7 @@
         </a>
         <nav class="header-nav">
           <a href="#pricing" class="nav-link">Planos</a>
+          <a href="#partner-apps" class="nav-link">Apps</a>
           <a href="#" class="nav-link btn-trigger-trial">Teste grátis</a>
           <a href="#faq" class="nav-link">Dúvidas frequentes</a>
           <a href="#footer" class="nav-link">Contato</a>
@@ -188,9 +189,74 @@
           </a>
         </div>
         <a href="#" class="btn-login btn-trigger-support">Suporte</a>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer & Backdrop Overlay -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Navegação mobile" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <a href="#" class="mobile-nav-logo" aria-label="NET Player">
+        <img src="assets/img/logo.png" alt="NET Player logo" />
+      </a>
+      <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Fechar menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav-links">
+      <a href="#pricing" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+        <span>Planos</span>
+      </a>
+      <a href="#partner-apps" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+        <span>Apps</span>
+      </a>
+      <a href="#faq" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        <span>Dúvidas frequentes</span>
+      </a>
+      <a href="#" class="mobile-nav-item btn-trigger-trial">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        <span>Teste grátis</span>
+      </a>
+      <a href="#" class="mobile-nav-item btn-trigger-support">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        <span>Falar com suporte</span>
+      </a>
+      <a href="#footer" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <span>Contato</span>
+      </a>
+    </nav>
+
+    <div class="mobile-nav-footer">
+      <div class="mobile-nav-social-row">
+        <a href="https://wa.me/5511917128774" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp">
+          <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.004 0C7.165 0 .003 7.161.003 15.999c0 2.82.737 5.573 2.14 7.998L0 32l8.186-2.147A15.94 15.94 0 0 0 16.004 32C24.838 32 32 24.837 32 15.999 32 7.161 24.838 0 16.004 0zm0 29.393a13.36 13.36 0 0 1-7.215-2.1l-.518-.307-5.362 1.406 1.43-5.222-.337-.535a13.32 13.32 0 0 1-2.044-7.136c0-7.38 6.007-13.386 13.39-13.386 7.38 0 13.386 6.006 13.386 13.386 0 7.383-6.35 13.394-13.73 13.394zm7.327-10.024c-.4-.2-2.367-1.168-2.733-1.3-.367-.134-.634-.2-.9.2-.268.4-1.034 1.3-1.268 1.568-.234.267-.467.3-.867.1-.4-.2-1.69-.623-3.22-1.987-1.19-1.062-1.993-2.374-2.227-2.774-.233-.4-.025-.616.175-.815.18-.18.4-.467.6-.7.2-.234.267-.4.4-.668.134-.267.067-.5-.033-.7-.1-.2-.9-2.168-1.234-2.968-.325-.78-.655-.674-.9-.687l-.767-.013c-.267 0-.7.1-1.067.5-.367.4-1.4 1.368-1.4 3.336 0 1.967 1.433 3.868 1.633 4.134.2.268 2.823 4.31 6.84 6.042.955.413 1.7.659 2.282.844.96.305 1.832.262 2.522.159.77-.115 2.367-.968 2.7-1.902.334-.934.334-1.734.234-1.902-.1-.167-.367-.267-.767-.467z"/></svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
 
   <main>
 
@@ -309,7 +375,7 @@
             <div class="smarter-devices-grid">
               
               <!-- Card 1: Netflix -->
-              <div class="device-card active">
+              <div class="device-card">
                 <div class="device-card-inner">
                   <img src="assets/img/logos/Logonetflix.png" alt="Netflix no NET Player Streaming" class="logo-card-img" />
                 </div>
@@ -608,7 +674,123 @@
     </section>
 
     <!-- ============================================
-         7. BENEFITS DOUBLE BLOCK
+         7. APPS PARCEIROS (FILM STRIP)
+         ============================================ -->
+    <section class="partner-apps section" id="partner-apps">
+      <!-- Giant background text -->
+      <div class="partner-apps-bg-text" aria-hidden="true">PLAYERS</div>
+
+      <div class="container">
+        <!-- Top row: Title, 3D Illustration, Paragraph description -->
+        <div class="partner-apps-top reveal">
+          
+          <div class="partner-apps-title-col">
+            <h2 class="partner-apps-title">
+              Temos o app <span class="highlight">compatível</span> com seu dispositivo.
+            </h2>
+          </div>
+          
+          <div class="partner-apps-illust-col">
+            <div class="partner-apps-illust-wrap">
+              <img src="assets/img/remote.png" alt="Controle Inteligente de TV e Apps" class="partner-apps-illust-img" />
+            </div>
+          </div>
+          
+          <div class="partner-apps-desc-col">
+            <p class="partner-apps-desc-text">
+              Conecte sua assinatura nos principais <span class="highlight-underline">aplicativos de IPTV</span> do mercado com transmissão rápida, listas organizadas e máxima estabilidade.
+            </p>
+          </div>
+          
+        </div>
+
+        <!-- Apps Carousel container -->
+        <div class="apps-carousel-container reveal">
+          <div class="apps-carousel-viewport">
+            <div class="apps-carousel-track">
+
+              <!-- Card 1: IPTV Smarters Pro -->
+              <div class="apps-carousel-card" title="IPTV Smarters Pro">
+                <img src="assets/img/logos-apps/IPTV Smarters.png" alt="IPTV Smarters Pro" class="apps-carousel-img" loading="lazy" />
+              </div>
+
+              <!-- Card 2: IBO Player -->
+              <div class="apps-carousel-card" title="IBO Player">
+                <img src="assets/img/logos-apps/ibo-player.png" alt="IBO Player" class="apps-carousel-img" loading="lazy" />
+              </div>
+
+              <!-- Card 3: Assist+ -->
+              <div class="apps-carousel-card" title="Assist+">
+                <img src="assets/img/logos-apps/assist+.png" alt="Assist+" class="apps-carousel-img" loading="lazy" />
+              </div>
+
+              <!-- Card 4: Max Player -->
+              <div class="apps-carousel-card" title="Max Player">
+                <img src="assets/img/logos-apps/max-player.png" alt="Max Player" class="apps-carousel-img" loading="lazy" />
+              </div>
+
+              <!-- Card 5: PlaySim -->
+              <div class="apps-carousel-card" title="PlaySim">
+                <img src="assets/img/logos-apps/playsim.png" alt="PlaySim" class="apps-carousel-img" loading="lazy" />
+              </div>
+
+              <!-- Card 6: Quick Player -->
+              <div class="apps-carousel-card" title="Quick Player">
+                <img src="assets/img/logos-apps/quick-player.png" alt="Quick Player" class="apps-carousel-img" loading="lazy" />
+              </div>
+
+              <!-- Card 7: Lazer Play -->
+              <div class="apps-carousel-card" title="Lazer Play">
+                <img src="assets/img/logos-apps/lazer-play.png" alt="Lazer Play" class="apps-carousel-img" loading="lazy" />
+              </div>
+
+              <!-- Card 8: Fun Play -->
+              <div class="apps-carousel-card" title="Fun Play">
+                <img src="assets/img/logos-apps/fun-play.png" alt="Fun Play" class="apps-carousel-img" loading="lazy" />
+              </div>
+
+              <!-- Card 9: Blased Player -->
+              <div class="apps-carousel-card" title="Blased Player">
+                <img src="assets/img/logos-apps/blased-player.png" alt="Blased Player" class="apps-carousel-img" loading="lazy" />
+              </div>
+
+              <!-- Card 10: Rio Box -->
+              <div class="apps-carousel-card" title="Rio Box">
+                <img src="assets/img/logos-apps/rio-box.png" alt="Rio Box" class="apps-carousel-img" loading="lazy" />
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Dots indicators -->
+          <div class="apps-carousel-dots">
+            <!-- Will be generated dynamically in JS -->
+          </div>
+        </div>
+
+        <!-- Help Support Callout -->
+        <div class="partner-apps-support-banner reveal" style="margin-top: var(--space-2xl);">
+          <div class="support-banner-content">
+            <div class="support-banner-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </div>
+            <div class="support-banner-text">
+              <h4>Precisa de ajuda para instalar ou configurar?</h4>
+              <p>Nosso time de suporte auxilia você a configurar seu acesso no aplicativo de sua preferência passo a passo.</p>
+            </div>
+          </div>
+          <a href="#" class="btn-outline btn-trigger-support">Falar com Suporte</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         8. BENEFITS DOUBLE BLOCK
          ============================================ -->
     <section class="benefits section" id="benefits">
       <div class="container">
