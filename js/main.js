@@ -238,6 +238,29 @@ function initTrialModal() {
     modal.classList.remove('active');
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
+
+    // Reset view after modal fade animation completes
+    setTimeout(() => {
+      const formEl = modal.querySelector('#trial-form');
+      const successView = modal.querySelector('#trial-success');
+      const headerView = modal.querySelector('.modal-header');
+      const dividerView = modal.querySelector('.modal-divider');
+
+      if (formEl) {
+        formEl.reset();
+        formEl.style.display = 'flex';
+      }
+      if (headerView) headerView.style.display = 'block';
+      if (dividerView) dividerView.style.display = 'block';
+      if (successView) successView.style.display = 'none';
+
+      const submitBtn = modal.querySelector('.modal-submit-btn');
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        const submitBtnText = submitBtn.querySelector('span');
+        if (submitBtnText) submitBtnText.textContent = 'Solicitar teste grátis';
+      }
+    }, 400);
   }
 
   // Add click events to triggers
@@ -294,34 +317,39 @@ function initTrialModal() {
       const name = document.getElementById('trial-name').value.trim();
       const whatsapp = document.getElementById('trial-whatsapp').value.trim();
 
-      // Real support WhatsApp phone number from floating button
-      const whatsappNumber = '5511917128774';
-
-      // Build message text
-      const text = `Olá! Gostaria de solicitar um teste grátis para o NET Player.\n\n` +
-                   `• *Nome:* ${name}\n` +
-                   `• *WhatsApp:* ${whatsapp}`;
-
-      const encodedText = encodeURIComponent(text);
-      const waUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
-
-      // Change button state for premium feel
       const submitBtn = form.querySelector('.modal-submit-btn');
       const submitBtnText = submitBtn.querySelector('span');
-      const originalText = submitBtnText.textContent;
       
       submitBtn.disabled = true;
-      submitBtnText.textContent = 'REDIRECIONANDO...';
+      if (submitBtnText) submitBtnText.textContent = 'ENVIANDO...';
 
+      // Send Email notification to contato@netplayer.com.br via FormSubmit API
+      fetch("https://formsubmit.co/ajax/contato@netplayer.com.br", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          _subject: `Novo Pedido de Teste Grátis: ${name}`,
+          _template: "table",
+          "Nome": name,
+          "WhatsApp": whatsapp,
+          "Origem": window.location.pathname.includes('links') ? 'Instagram Bio (netplayer.com.br/links)' : 'Website Principal (netplayer.com.br)'
+        })
+      }).catch(err => console.log('FormSubmit notification error:', err));
+
+      // Show Success View inside Modal
       setTimeout(() => {
-        window.open(waUrl, '_blank');
+        const headerView = modal.querySelector('.modal-header');
+        const dividerView = modal.querySelector('.modal-divider');
+        const successView = modal.querySelector('#trial-success');
 
-        // Reset and close
-        form.reset();
-        submitBtn.disabled = false;
-        submitBtnText.textContent = originalText;
-        closeModal();
-      }, 1000);
+        if (form) form.style.display = 'none';
+        if (headerView) headerView.style.display = 'none';
+        if (dividerView) dividerView.style.display = 'none';
+        if (successView) successView.style.display = 'block';
+      }, 600);
     });
   }
 }
