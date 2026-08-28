@@ -1,0 +1,30 @@
+# robots.txt for NET Player (netplayer.com.br)
+User-agent: *
+Allow: /
+
+# Explicit permission for Search & AI Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://netplayer.com.br/sitemap.xml

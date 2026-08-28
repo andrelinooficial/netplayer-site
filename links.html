@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NET Player — Links Oficiais & Atendimento</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="title" content="NET Player — Links Oficiais & Atendimento" />
+  <meta name="description" content="Acesse nossos canais oficiais: WhatsApp, Website, Suporte, YouTube e solicite seu Teste Grátis de 7 dias do NET Player." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A171E" />
+  <link rel="canonical" href="https://netplayer.com.br/links" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://netplayer.com.br/links" />
+  <meta property="og:title" content="NET Player — Links Oficiais" />
+  <meta property="og:description" content="Conecte-se com o NET Player: WhatsApp, Website Oficial, Suporte 24h e Teste Grátis." />
+  <meta property="og:image" content="https://netplayer.com.br/assets/img/logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/fav.png" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* ============================================
+       NET PLAYER — Instagram Bio Linktree Page
+       ============================================ */
+    :root {
+      --links-bg: #0A171E;
+      --links-card-bg: #13222C;
+      --links-card-border: #203545;
+    }
+
+    body {
+      background: repeating-linear-gradient(90deg, #0A171E 0px, #0A171E 48px, #0F1B23 48px, #0F1B23 96px);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: var(--space-xl) var(--space-sm);
+      color: var(--color-text);
+      font-family: var(--font-family);
+    }
+
+    .links-wrapper {
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ---- Header / Avatar ---- */
+    .profile-section {
+      text-align: center;
+      margin-bottom: var(--space-lg);
+      width: 100%;
+    }
+
+    .avatar-wrap {
+      position: relative;
+      width: 96px;
+      height: 96px;
+      margin: 0 auto var(--space-sm);
+    }
+
+    .avatar-img-wrap {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-surface), #0D161F);
+      border: 2.5px solid var(--color-accent);
+      box-shadow: 0 0 25px rgba(79, 216, 232, 0.25), 0 8px 24px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      overflow: hidden;
+    }
+
+    .avatar-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Verified Badge */
+    .verified-badge {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 26px;
+      height: 26px;
+      background: var(--color-primary);
+      border: 2px solid #0A171E;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(242, 56, 90, 0.4);
+    }
+
+    .verified-badge svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .profile-title {
+      font-family: 'Sora', var(--font-family);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--color-text);
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .profile-subtitle {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      line-height: 1.4;
+      max-width: 320px;
+      margin: 0 auto var(--space-md);
+    }
+
+    /* ---- Social Icons Row ---- */
+    .social-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: var(--space-lg);
+    }
+
+    .social-icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--links-card-bg);
+      border: 1px solid var(--links-card-border);
+      color: var(--color-text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-icon-btn:hover {
+      color: var(--color-text);
+      border-color: var(--color-accent);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(79, 216, 232, 0.2);
+    }
+
+    .social-icon-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* ---- Link Cards Container ---- */
+    .links-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: var(--space-xl);
+    }
+
+    /* Base Link Card */
+    .link-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 14px 18px;
+      background: var(--links-card-bg);
+      border: 1px solid var(--links-card-border);
+      border-radius: 16px;
+      text-decoration: none;
+      color: var(--color-text);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .link-card:hover::before {
+      left: 100%;
+    }
+
+    .link-card:hover {
+      transform: translateY(-3px) scale(1.01);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .link-card-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* Icon Box inside Card */
+    .card-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-icon-box svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .card-info {
+      text-align: left;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: var(--fw-semibold);
+      color: var(--color-text);
+      line-height: 1.25;
+      margin-bottom: 2px;
+    }
+
+    .card-subtitle {
+      font-size: 0.78rem;
+      color: var(--color-text-secondary);
+      line-height: 1.2;
+    }
+
+    .card-arrow {
+      width: 20px;
+      height: 20px;
+      color: var(--color-text-muted);
+      flex-shrink: 0;
+      transition: transform var(--transition), color var(--transition);
+    }
+
+    .link-card:hover .card-arrow {
+      transform: translateX(4px);
+      color: var(--color-text);
+    }
+
+    /* ---- Card Themes ---- */
+
+    /* Featured Trial Card (Primary Red/Pink Glow) */
+    .link-card--trial {
+      background: linear-gradient(135deg, rgba(242, 56, 90, 0.15) 0%, rgba(19, 34, 44, 0.9) 100%);
+      border-color: rgba(242, 56, 90, 0.4);
+      box-shadow: 0 8px 24px rgba(242, 56, 90, 0.2);
+    }
+    .link-card--trial .card-icon-box {
+      background: linear-gradient(135deg, #F2385A, #D92E4E);
+      box-shadow: 0 4px 14px rgba(242, 56, 90, 0.4);
+    }
+    .link-card--trial:hover {
+      border-color: var(--color-primary);
+      box-shadow: 0 12px 32px rgba(242, 56, 90, 0.35);
+    }
+
+    /* WhatsApp Card */
+    .link-card--whatsapp {
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(19, 34, 44, 0.9) 100%);
+      border-color: rgba(37, 211, 102, 0.3);
+    }
+    .link-card--whatsapp .card-icon-box {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+    }
+    .link-card--whatsapp:hover {
+      border-color: #25D366;
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.3);
+    }
+
+    /* Website Card */
+    .link-card--website {
+      background: linear-gradient(135deg, rgba(79, 216, 232, 0.1) 0%, rgba(19, 34, 44, 0.9) 100%);
+      border-color: rgba(79, 216, 232, 0.3);
+    }
+    .link-card--website .card-icon-box {
+      background: linear-gradient(135deg, #4FD8E8, #2B9DB0);
+      box-shadow: 0 4px 14px rgba(79, 216, 232, 0.3);
+      color: #0D0F14;
+    }
+    .link-card--website:hover {
+      border-color: var(--color-accent);
+      box-shadow: 0 12px 30px rgba(79, 216, 232, 0.3);
+    }
+
+    /* YouTube Card */
+    .link-card--youtube {
+      background: linear-gradient(135deg, rgba(255, 0, 0, 0.1) 0%, rgba(19, 34, 44, 0.9) 100%);
+      border-color: rgba(255, 0, 0, 0.25);
+    }
+    .link-card--youtube .card-icon-box {
+      background: linear-gradient(135deg, #FF0000, #C40000);
+      box-shadow: 0 4px 14px rgba(255, 0, 0, 0.3);
+    }
+    .link-card--youtube:hover {
+      border-color: #FF0000;
+      box-shadow: 0 12px 30px rgba(255, 0, 0, 0.3);
+    }
+
+    /* Facebook Card */
+    .link-card--facebook {
+      background: linear-gradient(135deg, rgba(24, 119, 242, 0.1) 0%, rgba(19, 34, 44, 0.9) 100%);
+      border-color: rgba(24, 119, 242, 0.25);
+    }
+    .link-card--facebook .card-icon-box {
+      background: linear-gradient(135deg, #1877F2, #0D52B5);
+      box-shadow: 0 4px 14px rgba(24, 119, 242, 0.3);
+    }
+    .link-card--facebook:hover {
+      border-color: #1877F2;
+      box-shadow: 0 12px 30px rgba(24, 119, 242, 0.3);
+    }
+
+    /* Support Card */
+    .link-card--support .card-icon-box {
+      background: linear-gradient(135deg, #363D4E, #202530);
+      border: 1px solid var(--color-border);
+    }
+
+    /* ---- Footer ---- */
+    .links-footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      margin-top: auto;
+      padding-top: var(--space-md);
+    }
+
+    .links-footer p {
+      margin-bottom: 4px;
+    }
+
+    .links-footer span {
+      color: var(--color-accent);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="links-wrapper">
+
+    <!-- Profile Header Section -->
+    <header class="profile-section">
+      <!-- Round Logo Avatar -->
+      <div class="avatar-wrap">
+        <div class="avatar-img-wrap">
+          <img src="assets/img/fav.png" alt="NET Player Logo" />
+        </div>
+        <div class="verified-badge" title="Canal Oficial Verificado">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+          </svg>
+        </div>
+      </div>
+
+      <h1 class="profile-title">NET Player</h1>
+      <p class="profile-subtitle">Filmes, Séries & TV ao Vivo.<br/>O melhor conteúdo em todos os seus dispositivos.</p>
+
+      <!-- Quick Social Icons Row -->
+      <div class="social-row">
+        <a href="https://wa.me/5511917128774" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp">
+          <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.004 0C7.165 0 .003 7.161.003 15.999c0 2.82.737 5.573 2.14 7.998L0 32l8.186-2.147A15.94 15.94 0 0 0 16.004 32C24.838 32 32 24.837 32 15.999 32 7.161 24.838 0 16.004 0zm0 29.393a13.36 13.36 0 0 1-7.215-2.1l-.518-.307-5.362 1.406 1.43-5.222-.337-.535a13.32 13.32 0 0 1-2.044-7.136c0-7.38 6.007-13.386 13.39-13.386 7.38 0 13.386 6.006 13.386 13.386 0 7.383-6.35 13.394-13.73 13.394zm7.327-10.024c-.4-.2-2.367-1.168-2.733-1.3-.367-.134-.634-.2-.9.2-.268.4-1.034 1.3-1.268 1.568-.234.267-.467.3-.867.1-.4-.2-1.69-.623-3.22-1.987-1.19-1.062-1.993-2.374-2.227-2.774-.233-.4-.025-.616.175-.815.18-.18.4-.467.6-.7.2-.234.267-.4.4-.668.134-.267.067-.5-.033-.7-.1-.2-.9-2.168-1.234-2.968-.325-.78-.655-.674-.9-.687l-.767-.013c-.267 0-.7.1-1.067.5-.367.4-1.4 1.368-1.4 3.336 0 1.967 1.433 3.868 1.633 4.134.2.268 2.823 4.31 6.84 6.042.955.413 1.7.659 2.282.844.96.305 1.832.262 2.522.159.77-.115 2.367-.968 2.7-1.902.334-.934.334-1.734.234-1.902-.1-.167-.367-.267-.767-.467z"/></svg>
+        </a>
+        <a href="https://netplayer.com.br/" class="social-icon-btn" aria-label="Website">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Stacked Links Section -->
+    <main class="links-list">
+
+      <!-- Link 1: Solicitar Teste Grátis (Featured CTA) -->
+      <a href="#" class="link-card link-card--trial btn-trigger-trial">
+        <div class="link-card-left">
+          <div class="card-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Solicitar Teste Grátis</div>
+            <div class="card-subtitle">Experimente sem compromisso</div>
+          </div>
+        </div>
+        <svg class="card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+      <!-- Link 2: WhatsApp -->
+      <a href="https://wa.me/5511917128774" target="_blank" rel="noopener noreferrer" class="link-card link-card--whatsapp">
+        <div class="link-card-left">
+          <div class="card-icon-box">
+            <svg viewBox="0 0 32 32" fill="currentColor">
+              <path d="M16.004 0C7.165 0 .003 7.161.003 15.999c0 2.82.737 5.573 2.14 7.998L0 32l8.186-2.147A15.94 15.94 0 0 0 16.004 32C24.838 32 32 24.837 32 15.999 32 7.161 24.838 0 16.004 0zm0 29.393a13.36 13.36 0 0 1-7.215-2.1l-.518-.307-5.362 1.406 1.43-5.222-.337-.535a13.32 13.32 0 0 1-2.044-7.136c0-7.38 6.007-13.386 13.39-13.386 7.38 0 13.386 6.006 13.386 13.386 0 7.383-6.35 13.394-13.73 13.394zm7.327-10.024c-.4-.2-2.367-1.168-2.733-1.3-.367-.134-.634-.2-.9.2-.268.4-1.034 1.3-1.268 1.568-.234.267-.467.3-.867.1-.4-.2-1.69-.623-3.22-1.987-1.19-1.062-1.993-2.374-2.227-2.774-.233-.4-.025-.616.175-.815.18-.18.4-.467.6-.7.2-.234.267-.4.4-.668.134-.267.067-.5-.033-.7-.1-.2-.9-2.168-1.234-2.968-.325-.78-.655-.674-.9-.687l-.767-.013c-.267 0-.7.1-1.067.5-.367.4-1.4 1.368-1.4 3.336 0 1.967 1.433 3.868 1.633 4.134.2.268 2.823 4.31 6.84 6.042.955.413 1.7.659 2.282.844.96.305 1.832.262 2.522.159.77-.115 2.367-.968 2.7-1.902.334-.934.334-1.734.234-1.902-.1-.167-.367-.267-.767-.467z"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Falar no WhatsApp</div>
+            <div class="card-subtitle">Atendimento rápido e assinaturas</div>
+          </div>
+        </div>
+        <svg class="card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+      <!-- Link 3: Website Oficial -->
+      <a href="index.html" class="link-card link-card--website">
+        <div class="link-card-left">
+          <div class="card-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Website Oficial</div>
+            <div class="card-subtitle">Conheça nossos planos e diferenciais</div>
+          </div>
+        </div>
+        <svg class="card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+      <!-- Link 4: YouTube -->
+      <a href="#" target="_blank" rel="noopener noreferrer" class="link-card link-card--youtube">
+        <div class="link-card-left">
+          <div class="card-icon-box">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Canal no YouTube</div>
+            <div class="card-subtitle">Inscreva-se e veja tutoriais completos</div>
+          </div>
+        </div>
+        <svg class="card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+      <!-- Link 5: Facebook -->
+      <a href="#" target="_blank" rel="noopener noreferrer" class="link-card link-card--facebook">
+        <div class="link-card-left">
+          <div class="card-icon-box">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Página no Facebook</div>
+            <div class="card-subtitle">Siga e acompanhe todas as novidades</div>
+          </div>
+        </div>
+        <svg class="card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+      <!-- Link 6: Suporte Técnico -->
+      <a href="https://wa.me/5511917128774?text=Olá!%20Preciso%20de%20suporte%20técnico%20com%20o%20NET%20Player." target="_blank" rel="noopener noreferrer" class="link-card link-card--support">
+        <div class="link-card-left">
+          <div class="card-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <div class="card-title">Suporte 24h</div>
+            <div class="card-subtitle">Central de ajuda e atendimento rápido</div>
+          </div>
+        </div>
+        <svg class="card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="links-footer">
+      <p>&copy; 2026 <span>NET PLAYER</span>. Todos os direitos reservados.</p>
+    </footer>
+
+  </div>
+
+  <!-- Modal de Teste Grátis -->
+  <div id="trial-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <!-- Close button -->
+      <button class="modal-close" aria-label="Fechar modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Decorative cinema film-strip top -->
+      <div class="modal-film-strip" aria-hidden="true"></div>
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h2 id="modal-title" class="modal-title">Solicitar <span class="highlight">Teste Grátis</span></h2>
+        <p class="modal-subtitle">Preencha abaixo e receba seu acesso direto no WhatsApp.</p>
+      </div>
+
+      <!-- Dashed divider (pricing card style) -->
+      <hr class="modal-divider"/>
+
+      <!-- Form -->
+      <form id="trial-form" class="modal-form">
+        <div class="form-group">
+          <label for="trial-name" class="form-label">Nome Completo <span class="required">*</span></label>
+          <div class="form-input-wrap">
+            <svg class="form-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <input type="text" id="trial-name" class="form-input" placeholder="Digite seu nome completo" required autocomplete="name" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="trial-whatsapp" class="form-label">WhatsApp <span class="required">*</span></label>
+          <div class="form-input-wrap">
+            <svg class="form-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <input type="tel" id="trial-whatsapp" class="form-input" placeholder="(11) 99999-9999" required autocomplete="tel" />
+          </div>
+        </div>
+        <button type="submit" class="modal-submit-btn">
+          <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px; flex-shrink: 0;">
+            <path d="M16.004 0C7.165 0 .003 7.161.003 15.999c0 2.82.737 5.573 2.14 7.998L0 32l8.186-2.147A15.94 15.94 0 0 0 16.004 32C24.838 32 32 24.837 32 15.999 32 7.161 24.838 0 16.004 0zm0 29.393a13.36 13.36 0 0 1-7.215-2.1l-.518-.307-5.362 1.406 1.43-5.222-.337-.535a13.32 13.32 0 0 1-2.044-7.136c0-7.38 6.007-13.386 13.39-13.386 7.38 0 13.386 6.006 13.386 13.386 0 7.383-6.35 13.394-13.73 13.394zm7.327-10.024c-.4-.2-2.367-1.168-2.733-1.3-.367-.134-.634-.2-.9.2-.268.4-1.034 1.3-1.268 1.568-.234.267-.467.3-.867.1-.4-.2-1.69-.623-3.22-1.987-1.19-1.062-1.993-2.374-2.227-2.774-.233-.4-.025-.616.175-.815.18-.18.4-.467.6-.7.2-.234.267-.4.4-.668.134-.267.067-.5-.033-.7-.1-.2-.9-2.168-1.234-2.968-.325-.78-.655-.674-.9-.687l-.767-.013c-.267 0-.7.1-1.067.5-.367.4-1.4 1.368-1.4 3.336 0 1.967 1.433 3.868 1.633 4.134.2.268 2.823 4.31 6.84 6.042.955.413 1.7.659 2.282.844.96.305 1.832.262 2.522.159.77-.115 2.367-.968 2.7-1.902.334-.934.334-1.734.234-1.902-.1-.167-.367-.267-.767-.467z"/>
+          </svg>
+          <span>Solicitar teste grátis</span>
+        </button>
+      </form>
+
+      <!-- Decorative cinema film-strip bottom -->
+      <div class="modal-film-strip modal-film-strip--bottom" aria-hidden="true"></div>
+
+      <!-- Ticket notches -->
+      <div class="modal-notch modal-notch--left" aria-hidden="true"></div>
+      <div class="modal-notch modal-notch--right" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

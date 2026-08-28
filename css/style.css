@@ -251,28 +251,25 @@ textarea {
 .lang-switch {
   display: flex;
   align-items: center;
-  gap: 4px;
-  font-size: .8rem;
-  font-weight: var(--fw-semibold);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  gap: 6px;
   color: var(--color-text-secondary);
 }
 
-.lang-switch button {
+.lang-switch a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--color-text-secondary);
-  font-size: .8rem;
-  font-weight: var(--fw-semibold);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 4px 6px;
-  border-radius: var(--radius-sm);
   transition: color var(--transition);
 }
 
-.lang-switch button.active,
-.lang-switch button:hover {
+.lang-switch a:hover {
   color: var(--color-text);
+}
+
+.lang-switch a svg {
+  width: 18px;
+  height: 18px;
 }
 
 .header-separator {
@@ -658,7 +655,24 @@ textarea {
   transition: transform var(--transition), border-color var(--transition), opacity var(--transition);
   border: 1.5px solid transparent;
   flex-shrink: 0;
-  opacity: 0.6; /* Inativos ficam levemente opacos */
+  opacity: 0.6;
+  overflow: hidden;
+  padding: 0;
+}
+
+.logo-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  filter: brightness(0.9);
+  transition: filter var(--transition);
+}
+
+.device-card.active .logo-card-img,
+.device-card:hover .logo-card-img {
+  filter: brightness(1.1);
 }
 
 .smarter-carousel-dots {
@@ -703,9 +717,9 @@ textarea {
   transition: color var(--transition);
 }
 
-/* Active card state (Android card outline in reference image) */
+/* Active card state */
 .device-card.active {
-  border-color: #FFFFFF;
+  border-color: transparent;
   background: #06151C;
   transform: scale(1.04);
   z-index: 5;
@@ -1860,5 +1874,337 @@ textarea {
   .whatsapp-float svg {
     width: 26px;
     height: 26px;
+  }
+}
+
+/* ============================================
+   11. FREE TRIAL MODAL — Cinema Ticket Design
+   ============================================ */
+
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 12, 18, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: var(--space-sm);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* ---- Card (Cinema Ticket) ---- */
+.modal-card {
+  background: linear-gradient(180deg, #13222C 0%, var(--color-surface) 100%);
+  border: 1px solid rgba(79, 216, 232, 0.12);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 440px;
+  padding: 0 var(--space-lg) var(--space-lg);
+  position: relative;
+  overflow: visible;
+  transform: scale(0.88) translateY(30px);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.6),
+    0 0 80px rgba(79, 216, 232, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.modal-overlay.active .modal-card {
+  transform: scale(1) translateY(0);
+}
+
+/* ---- Film-strip top & bottom ---- */
+.modal-film-strip {
+  position: relative;
+  width: calc(100% + calc(var(--space-lg) * 2));
+  margin-left: calc(var(--space-lg) * -1);
+  height: 18px;
+  background: #0A171E;
+  border-bottom: 1px solid #203545;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  overflow: hidden;
+}
+
+.modal-film-strip::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-image: repeating-linear-gradient(
+    to right,
+    #06151C,
+    #06151C 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.modal-film-strip--bottom {
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  border-bottom: none;
+  border-top: 1px solid #203545;
+  margin-top: var(--space-md);
+  margin-bottom: calc(var(--space-lg) * -1);
+}
+
+.modal-film-strip--bottom::before {
+  top: 6px;
+}
+
+/* ---- Ticket notches (like pricing cards) ---- */
+.modal-notch {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: rgba(10, 12, 18, 0.92);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.modal-notch--left {
+  left: -12px;
+  box-shadow: inset -2px 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.modal-notch--right {
+  right: -12px;
+  box-shadow: inset 2px 0 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Close button ---- */
+.modal-close {
+  position: absolute;
+  top: 26px;
+  right: var(--space-sm);
+  color: var(--color-text-muted);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  z-index: 5;
+  transition: all var(--transition);
+}
+
+.modal-close:hover {
+  color: var(--color-text);
+  background: rgba(242, 56, 90, 0.15);
+  border-color: rgba(242, 56, 90, 0.3);
+  transform: rotate(90deg);
+}
+
+.modal-close svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---- Modal Header ---- */
+.modal-header {
+  text-align: center;
+  padding-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+/* Title */
+.modal-title {
+  font-family: 'Sora', var(--font-family);
+  font-size: clamp(1.5rem, 4vw, 1.9rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 6px;
+  color: var(--color-text);
+  letter-spacing: -0.3px;
+}
+
+.modal-title .highlight {
+  background: linear-gradient(135deg, var(--color-accent), #7AEAF5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtitle */
+.modal-subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* ---- Dashed divider (pricing card pattern) ---- */
+.modal-divider {
+  border: none;
+  border-top: 1px dashed var(--color-border);
+  margin: var(--space-sm) 0;
+}
+
+/* ---- Form ---- */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.form-label {
+  font-size: 0.8rem;
+  font-weight: var(--fw-medium);
+  color: var(--color-text-secondary);
+  letter-spacing: 0.3px;
+}
+
+.form-label .required {
+  color: var(--color-primary);
+}
+
+/* Input wrapper with icon */
+.form-input-wrap {
+  position: relative;
+}
+
+.form-input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--color-text-muted);
+  pointer-events: none;
+  transition: color var(--transition);
+}
+
+.form-input-wrap:focus-within .form-input-icon {
+  color: var(--color-accent);
+}
+
+.form-input {
+  width: 100%;
+  background-color: #06151C;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  padding: 13px 16px 13px 44px;
+  font-size: 0.9rem;
+  transition: all var(--transition);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--color-text-disabled);
+  font-size: 0.85rem;
+}
+
+.form-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(79, 216, 232, 0.1), 0 0 20px rgba(79, 216, 232, 0.05);
+  background-color: #0A1D28;
+}
+
+/* ---- Submit button (WhatsApp branded) ---- */
+.modal-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: var(--space-xs);
+  padding: 14px 24px;
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.modal-submit-btn:hover::before {
+  left: 100%;
+}
+
+.modal-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.4);
+}
+
+.modal-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+  .modal-card {
+    padding: 0 var(--space-md) var(--space-md);
+    max-width: 360px;
+  }
+  .modal-title {
+    font-size: 1.4rem;
+  }
+  .modal-film-strip {
+    width: calc(100% + calc(var(--space-md) * 2));
+    margin-left: calc(var(--space-md) * -1);
+  }
+  .modal-film-strip--bottom {
+    margin-bottom: calc(var(--space-md) * -1);
+  }
+  .modal-chip {
+    font-size: 0.65rem;
+    padding: 3px 10px;
+  }
+  .modal-features {
+    gap: 6px;
   }
 }

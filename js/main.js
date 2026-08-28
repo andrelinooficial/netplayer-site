@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmarterCarousel();
   initLangSwitch();
   initSmoothScroll();
+  initTrialModal();
 });
 
 /* ---------- 0. Sticky Header on Scroll ---------- */
@@ -207,4 +208,120 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+/* ---------- 6. Free Trial Modal ---------- */
+function initTrialModal() {
+  const modal = document.getElementById('trial-modal');
+  if (!modal) return;
+
+  const closeBtn = modal.querySelector('.modal-close');
+  const form = document.getElementById('trial-form');
+  const triggers = document.querySelectorAll('.btn-trigger-trial');
+  const phoneInput = document.getElementById('trial-whatsapp');
+
+  // Open modal functions
+  function openModal() {
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    
+    // Focus the first input
+    const firstInput = modal.querySelector('input');
+    if (firstInput) {
+      setTimeout(() => firstInput.focus(), 150);
+    }
+  }
+
+  // Close modal functions
+  function closeModal() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
+  // Add click events to triggers
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  // Close with close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  // Close clicking outside the card
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close with ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  // Brazilian WhatsApp Masking
+  if (phoneInput) {
+    phoneInput.addEventListener('input', (e) => {
+      let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+      if (value.length > 11) value = value.slice(0, 11);
+      
+      // Mask logic
+      if (value.length > 6) {
+        e.target.value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+      } else if (value.length > 2) {
+        e.target.value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+      } else if (value.length > 0) {
+        e.target.value = `(${value}`;
+      } else {
+        e.target.value = '';
+      }
+    });
+  }
+
+  // Submit Logic
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('trial-name').value.trim();
+      const whatsapp = document.getElementById('trial-whatsapp').value.trim();
+
+      // Real support WhatsApp phone number from floating button
+      const whatsappNumber = '5511917128774';
+
+      // Build message text
+      const text = `Olá! Gostaria de solicitar um teste grátis para o NET Player.\n\n` +
+                   `• *Nome:* ${name}\n` +
+                   `• *WhatsApp:* ${whatsapp}`;
+
+      const encodedText = encodeURIComponent(text);
+      const waUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+
+      // Change button state for premium feel
+      const submitBtn = form.querySelector('.modal-submit-btn');
+      const submitBtnText = submitBtn.querySelector('span');
+      const originalText = submitBtnText.textContent;
+      
+      submitBtn.disabled = true;
+      submitBtnText.textContent = 'REDIRECIONANDO...';
+
+      setTimeout(() => {
+        window.open(waUrl, '_blank');
+
+        // Reset and close
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtnText.textContent = originalText;
+        closeModal();
+      }, 1000);
+    });
+  }
 }
